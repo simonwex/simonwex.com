@@ -1,0 +1,64 @@
+section {
+  width: 100%;
+  height: 100%;
+  margin: 120px auto;
+  display: flex;
+}
+
+.phi-column, .phi-row {
+  flex-grow: 1.618003;
+  flex-shrink: 1.618003;
+  flex-basis: 0;
+}
+
+.column, .row {
+  flex: 1 1 0;
+  display: flex; /* For nested flexbox */
+}
+
+.row {
+  flex-direction: row-reverse;
+  .row {
+    flex-direction: row;
+    .row {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.column {
+  flex-direction: column;
+  .column {
+    flex-direction: column-reverse;
+    .column {
+      flex-direction: column;
+    }
+  }
+}
+
+:root {
+  --background-color: #333;
+  --primary-color: #FF4081;
+  --secondary-color: #00BCD4;
+  --accent-color: #FFC107;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+/* OTHER STYLES */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(top, #fad961, #f76d1d);
+  background-attachment: fixed;
+}
+
+div {
+  background-color: transparentize(white, 0.75);
+  box-shadow: -1px -1px #F9A440, inset -1px -1px 0 0 #F9A440;
+}
