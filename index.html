@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Wex</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            min-height: 100vh;
+            background: #111;
+            overflow: hidden;
+            position: relative;
+        }
+        .curves {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+        }
+        .curve {
+            position: absolute;
+            left: 50%;
+            top: -10%;
+            transform: translateX(-50%);
+            width: 180vw;
+            height: 120vh;
+            border-radius: 50% 50% 0 0 / 60% 60% 0 0;
+            background: linear-gradient(180deg, #191919 80%, #111 100%);
+            opacity: 0.9;
+            box-shadow: 0 20px 60px 0 #000a, 0 1px 0 0 #2228;
+        }
+        .curve:nth-child(2) {
+            top: 2%;
+            width: 170vw;
+            height: 110vh;
+            opacity: 0.8;
+            background: linear-gradient(180deg, #151515 80%, #111 100%);
+        }
+        .curve:nth-child(3) {
+            top: 6%;
+            width: 160vw;
+            height: 100vh;
+            opacity: 0.7;
+            background: linear-gradient(180deg, #111 80%, #191919 100%);
+        }
+        .curve:nth-child(4) {
+            top: 12%;
+            width: 150vw;
+            height: 90vh;
+            opacity: 0.6;
+            background: linear-gradient(180deg, #191919 80%, #111 100%);
+        }
+        .curve:nth-child(5) {
+            top: 20%;
+            width: 140vw;
+            height: 80vh;
+            opacity: 0.5;
+            background: linear-gradient(180deg, #111 80%, #191919 100%);
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            color: #fff;
+            text-align: center;
+            top: 30vh;
+            font-family: system-ui, sans-serif;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.05em;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="curves">
+        <div class="curve"></div>
+        <div class="curve"></div>
+        <div class="curve"></div>
+        <div class="curve"></div>
+        <div class="curve"></div>
+    </div>
+    <div class="content">
+        <h1>Simon Wex</h1>
+        <p>Hello, world!</p>
+    </div>
+</body>
+</html> 
