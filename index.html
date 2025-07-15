@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simon Wex</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
+        
         html, body {
             height: 100%;
             margin: 0;
@@ -71,14 +73,30 @@
             top: 30vh;
             font-family: system-ui, sans-serif;
         }
-        h1 {
-            font-size: 2.5rem;
+        .brush-text {
+            font-family: 'Caveat', cursive;
+            font-weight: 700;
+            font-size: 4rem;
             margin-bottom: 0.5rem;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.02em;
+            background: linear-gradient(45deg, #ff1b6b, #ff6b9d, #c471ed, #8a2be2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transform: rotate(-2deg);
+            position: relative;
+            display: inline-block;
         }
+        
         p {
             font-size: 1.2rem;
             color: #ccc;
+        }
+        
+        @media (max-width: 768px) {
+            .brush-text {
+                font-size: 2.5rem;
+            }
         }
     </style>
 </head>
@@ -91,7 +109,7 @@
         <div class="curve"></div>
     </div>
     <div class="content">
-        <h1>Simon Wex</h1>
+        <h1 class="brush-text">Simon Wex</h1>
         <p>Hello, world!</p>
     </div>
 </body>
